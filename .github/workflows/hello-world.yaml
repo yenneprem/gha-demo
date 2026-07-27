@@ -3,6 +3,7 @@ on:
   pull_request:
      branches: 
        - main
+  push:
 jobs:
   Hello-world:
     strategy:
@@ -14,4 +15,5 @@ jobs:
         run: |
          echo "Hello Prem"
          echo "hello jeeva"
+         echo "hello ${{ vars.MY_NAME }}"
     
