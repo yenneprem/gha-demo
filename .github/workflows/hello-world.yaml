@@ -12,10 +12,12 @@ jobs:
     runs-on: ${{ matrix.name }}
     steps:
       - name: hello world
+        env:
+          name: ${{secrets.MY_NAME}}
         run: |
          echo "Hello Prem"
          echo "hello jeeva"
          echo "hello ${{ vars.MY_NAME }}"
-         name = ${{secrets.MY_NAME}}
+         name = $name
          echo $name
     
