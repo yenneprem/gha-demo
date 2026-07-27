@@ -16,4 +16,6 @@ jobs:
          echo "Hello Prem"
          echo "hello jeeva"
          echo "hello ${{ vars.MY_NAME }}"
+         name=${{secrets.MY_NAME}}
+         echo $name
     
