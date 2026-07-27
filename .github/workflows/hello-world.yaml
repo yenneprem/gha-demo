@@ -8,5 +8,7 @@ jobs:
     runs-on: ${{ matrix.name }}
     steps:
       - name: hello world
-        run: echo "Hello Prem"
+        run: |
+         echo "Hello Prem"
+         echo "hello jeeva"
     
