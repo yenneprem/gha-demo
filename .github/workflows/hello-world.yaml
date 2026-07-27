@@ -1,0 +1,12 @@
+name: "Hello World"
+on: workflow_dispatch
+jobs:
+  Hello-world:
+    strategy:
+      matrix:
+        name: [ubuntu-latest]
+    runs-on: ${{ matrix.name }}
+    steps:
+      - name: hello world
+        run: echo "Hello Prem"
+    
