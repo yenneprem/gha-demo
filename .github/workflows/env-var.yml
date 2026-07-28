@@ -23,4 +23,4 @@ jobs:
         - name: gitub conetxt
           run: echo "${{ toJson(github) }}"
         - name: print env
-          run: echo ${{ vars.ENV }}
+          run: echo "${{ vars.ENV }}"
