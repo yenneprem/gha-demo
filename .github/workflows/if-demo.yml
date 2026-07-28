@@ -1,0 +1,22 @@
+name: if demo
+on: 
+  push:
+     branches:
+       -  main
+  pull_request:
+     types: 
+       - opened
+       - synchronize
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: build step
+        run: echo "Build step"
+  deploy:
+    runs-on: ubuntu-24.04-arm
+    if: github.event_name == 'push' && github.ref_name == 'main'
+    steps:
+      - name: deploy step
+        run: echo "Deploy Step"
