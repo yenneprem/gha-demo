@@ -1,0 +1,14 @@
+name: "Environment Variables"
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: name of the env
+        required: true
+        default: dev
+jobs:
+   env-test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: connection env
+          run: echo "App is connectin to ${{ inputs.environmet }}"
