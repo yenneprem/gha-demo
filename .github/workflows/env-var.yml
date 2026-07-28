@@ -5,6 +5,7 @@ on:
       environment:
         description: name of the env
         required: true
+        type: choice
         default: dev
         options:
           - dev
