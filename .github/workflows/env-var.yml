@@ -17,6 +17,7 @@ on:
 jobs:
    env-test:
       runs-on: ubuntu-latest
+      environment: ${{ inputs.environment }}
       steps:
         - name: connection env
           run: echo "App is using ${{ inputs.artifact_tag }} art tag on ${{ inputs.environment }}"
