@@ -16,5 +16,5 @@ jobs:
       runs-on: ubuntu-latest
       steps:
        - name: get version from job1
-         run: echo "The version is ${{ needs.output-var.outputs.ver }}
+         run: echo "The version is ${{ needs.output-var.outputs.ver }}"
   
