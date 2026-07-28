@@ -6,6 +6,10 @@ on:
         description: name of the env
         required: true
         default: dev
+        options:
+          - dev
+          - test
+          - prod
 jobs:
    env-test:
       runs-on: ubuntu-latest
