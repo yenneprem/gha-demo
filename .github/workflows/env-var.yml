@@ -11,4 +11,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: connection env
-          run: echo "App is connectin to ${{ inputs.environmet }}"
+          run: echo "App is connectin to ${{ inputs.environment }}"
