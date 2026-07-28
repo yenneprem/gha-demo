@@ -9,7 +9,7 @@ on:
         default: dev
         options:
           - dev
-          - test
+          - uat
           - prod
       artifact_tag:
           description: artifactory tags
