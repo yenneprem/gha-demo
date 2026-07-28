@@ -10,9 +10,12 @@ on:
           - dev
           - test
           - prod
+      artifact_tag:
+          description: artifactory tags
+          required: true
 jobs:
    env-test:
       runs-on: ubuntu-latest
       steps:
         - name: connection env
-          run: echo "App is connectin to ${{ inputs.environment }}"
+          run: echo "App is using ${{ inputs.artifact_tag }} art tag on ${{ inputs.environment }}"
