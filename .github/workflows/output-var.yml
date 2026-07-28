@@ -3,9 +3,18 @@ on: workflow_dispatch
 jobs:
   output-var:
     runs-on: ubuntu-latest
+    outputs:
+      ver: ${{ steps.step1.outputs.version }}
     steps:
       - name: step one
         id: step1
         run: echo "version=v.1.2.3" >> "$GITHUB_OUTPUT"
       - name: step out
         run: echo "${{ steps.step1.outputs.version }}"
+  input-var:
+      needs: output-var
+      runs-on: ubuntu-latest
+      steps:
+       - name: get version from job1
+         run: echo "The version is ${{ needs.output-var.outputs.ver }}
+  
