@@ -20,3 +20,5 @@ jobs:
       steps:
         - name: connection env
           run: echo "App is using ${{ inputs.artifact_tag }} art tag on ${{ inputs.environment }}"
+        - name: gitub conetxt
+          run: echo "${{ toJson(github) }}"
